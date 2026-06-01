@@ -8,5 +8,6 @@ with raw_employees as (
 
 )
 
-select *
+select
+    *
 from raw_employees

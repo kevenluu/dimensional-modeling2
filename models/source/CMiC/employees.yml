@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: CMiC
+    database: DIMENSIONAL_MODELING2
+    schema: PUBLIC
+
+    tables:
+      - name: EMPLOYEES

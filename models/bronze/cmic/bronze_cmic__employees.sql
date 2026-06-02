@@ -4,7 +4,7 @@ with raw_employees as
     (
     select 
         *
-    from {{ source('CMiC', 'EMPLOYEES') }} 
+    from {{ source('cmic', 'hr_employee_info_master') }} 
     )
 
 select

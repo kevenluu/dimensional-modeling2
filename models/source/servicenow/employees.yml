@@ -1,9 +1,9 @@
 version: 2
 
 sources:
-  - name: cmic
+  - name: servicenow
     database: dimensional_modeling2
     schema: public
 
     tables:
-      - name: hr_employee_info_master
+      - name: employee_eligibility_programs

@@ -1,12 +1,11 @@
-{{ config(materialized='table') }}
+{{ config(materialized='view') }}
 
-with raw_employees as (
-
+with raw_employees as 
+    (
     select 
         *
     from {{ source('CMiC', 'EMPLOYEES') }} 
-
-)
+    )
 
 select
     *

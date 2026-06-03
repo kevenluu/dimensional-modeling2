@@ -14,7 +14,7 @@ with date_spine as
 date_spine_derived as
     (
     select
-        to_number(to_char(date_day, 'YYYYMMDD')) as date_key,
+        to_number(to_char(date_day, 'YYYYMMDD')) as date_id,
         date_day as date,
         year(date_day) as year,
         quarter(date_day) as quarter,

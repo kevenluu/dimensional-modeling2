@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: cmic
+    database: dimensional_modeling2
+    schema: public
+
+    tables:
+      - name: member_program_enrollment

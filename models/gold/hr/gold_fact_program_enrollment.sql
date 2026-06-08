@@ -1,7 +1,7 @@
 {{ config(materialized='table') }}
 
 
-with fct_program_enrollment as
+with fact_program_enrollment as
     (
     select
         *
@@ -10,4 +10,4 @@ with fct_program_enrollment as
 
 select
     *
-from fct_program_enrollment
+from fact_program_enrollment

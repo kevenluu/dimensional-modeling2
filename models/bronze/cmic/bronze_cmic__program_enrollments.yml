@@ -1,0 +1,25 @@
+
+version: 2
+
+models:
+  - name: bronze_cmic__program_enrollments
+    description: "CMiC program enrollment staging model. One row represents one program enrollment for an employee."
+
+    columns:
+      - name: member_key
+        description: "Foreign key identifying the member enrolled in the program"
+        tests:
+          - not_null
+
+      - name: program_key
+        description: "Foreign key identifying the program the member is enrolled in"
+        tests:
+          - not_null
+
+      - name: enrollment_date_key
+        description: "Foreign key identifying the date of enrollment"
+        tests:
+          - not_null
+
+      - name: end_date_key
+        description: "Foreign key identifying the end date of the enrollment"

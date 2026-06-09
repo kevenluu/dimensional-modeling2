@@ -1,0 +1,19 @@
+
+version: 2
+
+models:
+  - name: bronze_servicenow__programs
+    description: "ServiceNow programs staging model. One row represents one program."
+
+    columns:
+      - name: program_id
+        description: "The unique identifier for the program in ServiceNow"
+        tests:
+          - not_null
+          - unique
+
+      - name: program_name
+        description: "The name of the program"
+        
+      - name: program_type
+        description: "The type of the program"

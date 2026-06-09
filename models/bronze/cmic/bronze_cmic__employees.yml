@@ -1,0 +1,37 @@
+
+version: 2
+
+models:
+  - name: bronze_cmic__employees
+    description: "CMiC employee staging model. One row represents one employee."
+
+    columns:
+      - name: id
+        description: "The unique identifier for the employee in CMiC"
+        tests:
+          - not_null
+          - unique
+
+      - name: name
+        description: "The name of the employee"
+
+      - name: email
+        description: "The email address of the employee"
+
+      - name: date_of_birth
+        description: "The date of birth of the employee"
+
+      - name: province_of_residence
+        description: "The province where the employee resides"
+
+      - name: created_at
+        description: "The timestamp when the record was created"
+
+      - name: loaded_at
+        description: "The timestamp when the record was loaded into the staging model"
+
+      - name: organization_id
+        description: "The ID of the organization the employee belongs to"
+
+      - name: eligible_programs
+        description: "A list of programs the employee is eligible for"

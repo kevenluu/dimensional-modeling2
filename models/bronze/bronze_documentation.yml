@@ -1,0 +1,47 @@
+
+version: 2
+
+models:
+  - name: bronze_cmic__employees
+    description: "CMiC employee staging model. One row represents one employee."
+    columns:
+      - name: id
+        description: "The unique identifier for the employee in CMiC"
+      - name: name
+        description: "The name of the employee"
+      - name: email
+        description: "The email address of the employee"
+      - name: date_of_birth
+        description: "The date of birth of the employee"
+      - name: province_of_residence
+        description: "The province where the employee resides"
+      - name: created_at
+        description: "The timestamp when the record was created"
+      - name: loaded_at
+        description: "The timestamp when the record was loaded into the staging model"
+      - name: organization_id
+        description: "The ID of the organization the employee belongs to"
+      - name: eligible_programs
+        description: "A list of programs the employee is eligible for"
+
+  - name: bronze_cmic__program_enrollments
+    description: "CMiC program enrollment staging model. One row represents one program enrollment for an employee."
+    columns:
+      - name: member_key
+        description: "Surrogate key identifying the member enrolled in the program"
+      - name: program_key
+        description: "Surrogate key identifying the program the member is enrolled in"
+      - name: enrollment_date_key
+        description: "Surrogate key identifying the date of enrollment"
+      - name: end_date_key
+        description: "Surrogate key identifying the end date of the enrollment"
+
+  - name: bronze_servicenow__programs
+    description: "ServiceNow programs staging model. One row represents one program."
+    columns:
+      - name: program_id
+        description: "The unique identifier for the program in ServiceNow"
+      - name: program_name
+        description: "The name of the program"
+      - name: program_type
+        description: "The type of the program"

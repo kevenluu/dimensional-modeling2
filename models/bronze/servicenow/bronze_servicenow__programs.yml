@@ -4,6 +4,8 @@ version: 2
 models:
   - name: bronze_servicenow__programs
     description: "ServiceNow programs staging model. One row represents one program."
+    config:
+      tags: ['Domain: HR', 'Security level: Internal', 'Source: ServiceNow', 'Layer: Bronze']
 
     columns:
       - name: program_id

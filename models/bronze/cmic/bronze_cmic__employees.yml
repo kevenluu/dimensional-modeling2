@@ -4,6 +4,8 @@ version: 2
 models:
   - name: bronze_cmic__employees
     description: "CMiC employee staging model. One row represents one employee."
+    config:
+      tags: ['Domain: HR', 'Security level: Confidential', 'Source: CMiC', 'Properties: PII', 'Layer: Bronze']
 
     columns:
       - name: id
